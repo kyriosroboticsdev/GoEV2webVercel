@@ -125,27 +125,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ---------- 03 PILOT ---------- */}
-        <section
-          id="pilot"
-          className="relative overflow-hidden border-t border-line py-28"
-        >
-          <div className="absolute inset-0 grid-hint opacity-40" />
-          <div className="relative mx-auto max-w-4xl px-5 text-center">
-            <Kicker>03 / Pilot Program</Kicker>
-            <h2 className="mx-auto mt-5 max-w-3xl text-4xl font-bold tracking-tight sm:text-6xl">
-              We&apos;re onboarding our first pilot customers.
-            </h2>
-            <p className="mx-auto mt-6 max-w-xl text-muted">
-              A small group of riders, resorts, and operators shaping EV² before
-              everyone else.
-            </p>
-            <Link href="/pilot" className={`${primaryBtn} mt-10`}>
-              Apply to the Pilot →
-            </Link>
-          </div>
-        </section>
-
         {/* ---------- STATS BOX (links to specs) ---------- */}
         <section className="border-t border-line py-16">
           <div className="mx-auto max-w-6xl px-5">
@@ -173,6 +152,27 @@ export default function Home() {
                   See full specs →
                 </span>
               </div>
+            </Link>
+          </div>
+        </section>
+
+        {/* ---------- 03 PILOT ---------- */}
+        <section
+          id="pilot"
+          className="relative overflow-hidden border-t border-line py-28"
+        >
+          <div className="absolute inset-0 grid-hint opacity-40" />
+          <div className="relative mx-auto max-w-4xl px-5 text-center">
+            <Kicker>03 / Pilot Program</Kicker>
+            <h2 className="mx-auto mt-5 max-w-3xl text-4xl font-bold tracking-tight sm:text-6xl">
+              We&apos;re onboarding our first pilot customers.
+            </h2>
+            <p className="mx-auto mt-6 max-w-xl text-muted">
+              A small group of riders, resorts, and operators shaping EV² before
+              everyone else.
+            </p>
+            <Link href="/pilot" className={`${primaryBtn} mt-10`}>
+              Apply to the Pilot →
             </Link>
           </div>
         </section>
