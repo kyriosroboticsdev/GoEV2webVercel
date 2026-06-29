@@ -146,18 +146,33 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ---------- PROOF STRIP (demoted specs) ---------- */}
-        <section className="border-t border-line bg-surface/30 py-6">
-          <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-6 gap-y-2 px-5 font-mono text-xs uppercase tracking-wider text-muted">
-            <span>Quad-motor AWD</span>
-            <span className="text-line">/</span>
-            <span>~55 mi range</span>
-            <span className="text-line">/</span>
-            <span>2,500 lb towing</span>
-            <span className="text-line">/</span>
-            <span>IP67 waterproof</span>
-            <Link href="/specs" className="text-accent hover:underline">
-              See full specs →
+        {/* ---------- STATS BOX (links to specs) ---------- */}
+        <section className="border-t border-line py-16">
+          <div className="mx-auto max-w-6xl px-5">
+            <Link
+              href="/specs"
+              className="group block rounded-sm border border-line bg-surface/40 p-6 transition-colors hover:border-accent/50 hover:bg-surface-2/60 sm:p-8"
+            >
+              <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <div className="kicker">// stats for nerds</div>
+                  <h2 className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">
+                    Here&apos;s what EV² can do for you.
+                  </h2>
+                  <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 font-mono text-xs uppercase tracking-wider text-muted">
+                    <span>Quad-motor AWD</span>
+                    <span className="text-line">/</span>
+                    <span>~55 mi range</span>
+                    <span className="text-line">/</span>
+                    <span>2,500 lb towing</span>
+                    <span className="text-line">/</span>
+                    <span>IP67</span>
+                  </div>
+                </div>
+                <span className="inline-flex shrink-0 items-center gap-2 font-mono text-sm text-accent transition-transform duration-200 group-hover:translate-x-1">
+                  See full specs →
+                </span>
+              </div>
             </Link>
           </div>
         </section>
