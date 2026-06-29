@@ -1,26 +1,102 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ---- EV² "Signal" design tokens ---- */
+@theme {
+  --color-bg: #0a0c10; /* near-black, cool charcoal */
+  --color-surface: #11141b; /* one step lighter for depth */
+  --color-surface-2: #171b24;
+  --color-line: #232a36; /* hairline rules */
+  --color-fg: #e8ecf2; /* high-contrast text */
+  --color-muted: #8a94a6; /* secondary text */
+  --color-accent: #3de0d0; /* single electric cyan accent */
+  --color-accent-dim: #1f7a73;
+
+  --font-sans: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #04201d;
+}
+
+/* Tiny monospace section kicker, e.g. "02 / CAPABILITIES" */
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+/* Hero scan line — one signature cue that sweeps the footage on load */
+.scanline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-accent),
+    transparent
+  );
+  opacity: 0.55;
+  box-shadow: 0 0 16px 2px var(--color-accent);
+  animation: scan 7s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  pointer-events: none;
+}
+
+@keyframes scan {
+  0% {
+    top: 8%;
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.55;
+  }
+  88% {
+    opacity: 0.55;
+  }
+  100% {
+    top: 92%;
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scanline {
+    animation: none;
+    opacity: 0.25;
+    top: 50%;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Faint grid hint usable on dark sections */
+.grid-hint {
+  background-image:
+    linear-gradient(var(--color-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-line) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    #000 0%,
+    transparent 75%
+  );
+  mask-image: radial-gradient(ellipse at center, #000 0%, transparent 75%);
+  opacity: 0.25;
 }
