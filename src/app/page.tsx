@@ -184,44 +184,6 @@ export default function Home() {
             </Link>
           </div>
         </section>
-
-        {/* ---------- 05 CONTACT ---------- */}
-        <section id="contact" className="border-t border-line py-24">
-          <div className="mx-auto max-w-6xl px-5">
-            <Kicker>05 / Contact</Kicker>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-5xl">
-              Talk to the founder directly.
-            </h2>
-            <p className="mt-4 max-w-lg text-muted">
-              No complicated forms. Reach out and you&apos;ll hear back from a
-              real person.
-            </p>
-
-            <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-line bg-line sm:grid-cols-3 lg:max-w-3xl">
-              <a
-                href="mailto:hello@goev2.com"
-                className="bg-surface p-5 transition-colors hover:bg-surface-2"
-              >
-                <div className="kicker mb-2">Email</div>
-                <div className="text-sm">hello@goev2.com</div>
-              </a>
-              <a
-                href="tel:+12175208243"
-                className="bg-surface p-5 transition-colors hover:bg-surface-2"
-              >
-                <div className="kicker mb-2">USA</div>
-                <div className="text-sm">+1 (217) 520-8243</div>
-              </a>
-              <a
-                href="tel:+918072280522"
-                className="bg-surface p-5 transition-colors hover:bg-surface-2"
-              >
-                <div className="kicker mb-2">India</div>
-                <div className="text-sm">+91 80722 80522</div>
-              </a>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </>

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="border-t border-line bg-surface/40">
+    <footer id="contact" className="border-t border-line bg-surface/40">
       <div className="mx-auto max-w-6xl px-5 py-14">
         <div className="flex flex-col gap-10 md:flex-row md:justify-between">
           <div className="max-w-xs">
@@ -43,12 +43,23 @@ export function Footer() {
             </div>
             <div>
               <div className="kicker mb-3">Contact</div>
+              <p className="mb-3 text-muted">
+                Talk to the founder directly — no complicated forms.
+              </p>
               <ul className="space-y-2 text-muted">
-                <li>San Diego, CA</li>
-                <li>Chennai, India</li>
                 <li>
-                  <a href="/contact" className="hover:text-fg">
-                    Get in touch
+                  <a href="mailto:hello@goev2.com" className="hover:text-fg">
+                    hello@goev2.com
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+12175208243" className="hover:text-fg">
+                    USA · +1 (217) 520-8243
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+918072280522" className="hover:text-fg">
+                    India · +91 80722 80522
                   </a>
                 </li>
               </ul>
