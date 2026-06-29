@@ -34,11 +34,6 @@ export function Footer() {
                     Pilot Program
                   </Link>
                 </li>
-                <li>
-                  <Link href="/team" className="hover:text-fg">
-                    Team
-                  </Link>
-                </li>
               </ul>
             </div>
             <div>

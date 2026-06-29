@@ -147,7 +147,7 @@ export default function Home() {
         </section>
 
         {/* ---------- PROOF STRIP (demoted specs) ---------- */}
-        <section className="border-y border-line bg-surface/30 py-6">
+        <section className="border-t border-line bg-surface/30 py-6">
           <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-6 gap-y-2 px-5 font-mono text-xs uppercase tracking-wider text-muted">
             <span>Quad-motor AWD</span>
             <span className="text-line">/</span>
@@ -162,28 +162,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ---------- 04 TEAM ---------- */}
-        <section className="border-t border-line py-24">
-          <div className="mx-auto max-w-6xl px-5">
-            <Kicker>04 / Team</Kicker>
-            <div className="mt-4 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-5xl">
-                Small. Credible. Real.
-              </h2>
-              <p className="max-w-md text-muted">
-                A focused team building a new kind of all-terrain vehicle —
-                close enough to the work that you can talk to the people making
-                it.
-              </p>
-            </div>
-            <Link
-              href="/team"
-              className="mt-8 inline-block text-sm text-accent hover:underline"
-            >
-              Meet the team →
-            </Link>
-          </div>
-        </section>
       </main>
       <Footer />
     </>
